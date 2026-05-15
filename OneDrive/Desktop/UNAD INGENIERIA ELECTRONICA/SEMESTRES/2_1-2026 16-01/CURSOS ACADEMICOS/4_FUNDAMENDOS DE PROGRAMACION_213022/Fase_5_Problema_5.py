@@ -33,3 +33,9 @@ for recurso in equipo:                                            # Recorre cada
         if not isinstance(hora, int):                             # Verifica si el valor NO es un número entero
             print(f"Error: el valor '{hora}' en el recurso {nombre} no es numérico")  
             # Si encuentra un error, muestra un mensaje indicando el recurso y el valor incorrecto
+
+# R5: Función para calcular la suma de horas semanales por recurso
+def calcular_jornada(recurso):                                    # Define una función que recibe como parámetro una fila de la matriz (un recurso)
+    nombre = recurso[0]                                           # El primer elemento de la fila es el nombre del recurso
+    horas = sum(recurso[1:])                                      # Suma todas las horas de lunes a viernes (del segundo al sexto elemento)
+    return nombre, horas                                          # Devuelve el nombre del recurso y el total de horas trabajadas en la semana
