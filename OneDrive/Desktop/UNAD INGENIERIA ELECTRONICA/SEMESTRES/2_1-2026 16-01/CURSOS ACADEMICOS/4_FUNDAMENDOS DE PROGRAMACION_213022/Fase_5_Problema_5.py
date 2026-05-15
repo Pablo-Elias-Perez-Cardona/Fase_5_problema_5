@@ -39,3 +39,10 @@ def calcular_jornada(recurso):                                    # Define una f
     nombre = recurso[0]                                           # El primer elemento de la fila es el nombre del recurso
     horas = sum(recurso[1:])                                      # Suma todas las horas de lunes a viernes (del segundo al sexto elemento)
     return nombre, horas                                          # Devuelve el nombre del recurso y el total de horas trabajadas en la semana
+
+# R6: Comparar el total de horas con el umbral de 40 horas
+def clasificar_jornada(horas):                                    # Define una función que recibe el total de horas semanales
+    if horas > 40:                                                # Si el total de horas es mayor a 40
+        return "Sobretiempo"                                      # Devuelve la clasificación "Sobretiempo"
+    else:                                                         # En cualquier otro caso (40 o menos)
+        return "Horario estándar"                                 # Devuelve la clasificación "Horario estándar"
