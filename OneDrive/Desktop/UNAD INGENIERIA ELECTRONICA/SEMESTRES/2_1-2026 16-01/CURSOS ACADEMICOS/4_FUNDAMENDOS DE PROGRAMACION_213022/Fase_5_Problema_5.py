@@ -1,0 +1,6 @@
+print("Fase 5 ----------------------- Evaluacion Final POA")
+print("Problema 5 ------------------- Horas trabajadas")
+print("Nombre del estudiante:-------- Pablo Elías Pérez Cardona")
+print("Grupo:------------------------ 213022_822")
+print("Programa:--------------------- Fundamentos de programacion - Ingeniería Electrónica")
+print("Código Fuente:---------------- autoría propia")
