@@ -46,3 +46,9 @@ def clasificar_jornada(horas):                                    # Define una f
         return "Sobretiempo"                                      # Devuelve la clasificación "Sobretiempo"
     else:                                                         # En cualquier otro caso (40 o menos)
         return "Horario estándar"                                 # Devuelve la clasificación "Horario estándar"
+
+# R7: Integrar cálculo y clasificación en una sola función
+def procesar_recurso(recurso):                                    # Define una función que recibe como parámetro una fila de la matriz (un recurso)
+    nombre, horas = calcular_jornada(recurso)                     # Llama a la función calcular_jornada (R3) para obtener nombre y total de horas
+    clasificacion = clasificar_jornada(horas)                     # Llama a la función clasificar_jornada (R4) para determinar la clasificación
+    return nombre, horas, clasificacion                           # Devuelve el nombre, el total de horas y la clasificación final
