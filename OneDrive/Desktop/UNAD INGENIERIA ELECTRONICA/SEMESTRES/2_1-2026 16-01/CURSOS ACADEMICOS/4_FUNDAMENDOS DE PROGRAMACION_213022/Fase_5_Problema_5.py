@@ -25,3 +25,11 @@ for i in range(num_recursos):                                     # Recorre desd
             except ValueError:                                    # Si ocurre un error (dato no numérico)
                 print("Error: valor no válido. Debe ingresar un número entero.")  
     equipo.append([nombre] + horas)                               # Construye la fila con nombre + horas y la agrega a la matriz 'equipo'
+
+# R4: Validar que los valores de horas sean numéricos
+for recurso in equipo:                                            # Recorre cada fila de la matriz (cada recurso)
+    nombre = recurso[0]                                           # El primer elemento de la fila es el nombre del recurso
+    for hora in recurso[1:]:                                      # Recorre las horas de lunes a viernes (del segundo al sexto elemento)
+        if not isinstance(hora, int):                             # Verifica si el valor NO es un número entero
+            print(f"Error: el valor '{hora}' en el recurso {nombre} no es numérico")  
+            # Si encuentra un error, muestra un mensaje indicando el recurso y el valor incorrecto
