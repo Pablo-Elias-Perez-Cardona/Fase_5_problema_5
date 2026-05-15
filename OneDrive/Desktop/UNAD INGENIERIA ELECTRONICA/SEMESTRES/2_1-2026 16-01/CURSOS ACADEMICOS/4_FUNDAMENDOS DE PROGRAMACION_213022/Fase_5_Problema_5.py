@@ -58,3 +58,8 @@ informe = []                                                      # Se crea una 
 for recurso in equipo:                                            # Recorre cada fila de la matriz (cada recurso)
     nombre, horas, clasificacion = procesar_recurso(recurso)      # Llama a la función procesar_recurso (R5) para obtener datos completos
     informe.append((nombre, horas, clasificacion))                # Agrega una tupla con nombre, horas y clasificación a la lista informe
+
+# R9: Mostrar resultados en consola de manera clara y ordenada
+print("\n--- Informe de horas trabajadas ---")                    # Imprime un título para el informe en consola
+for nombre, horas, clasificacion in informe:                      # Recorre cada elemento de la lista informe (cada recurso procesado)
+    print(f"{nombre}: {horas} horas - {clasificacion}")           # Muestra el nombre del recurso, el total de horas trabajadas y la clasificación (Sobretiempo o Horario estándar)
