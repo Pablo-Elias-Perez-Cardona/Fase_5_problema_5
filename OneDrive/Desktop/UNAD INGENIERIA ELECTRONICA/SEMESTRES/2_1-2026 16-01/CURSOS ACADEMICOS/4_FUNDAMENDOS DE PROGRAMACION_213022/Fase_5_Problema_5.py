@@ -52,3 +52,9 @@ def procesar_recurso(recurso):                                    # Define una f
     nombre, horas = calcular_jornada(recurso)                     # Llama a la función calcular_jornada (R3) para obtener nombre y total de horas
     clasificacion = clasificar_jornada(horas)                     # Llama a la función clasificar_jornada (R4) para determinar la clasificación
     return nombre, horas, clasificacion                           # Devuelve el nombre, el total de horas y la clasificación final
+
+# R8: Generar informe con nombre, total de horas y clasificación
+informe = []                                                      # Se crea una lista vacía donde se almacenará el informe final
+for recurso in equipo:                                            # Recorre cada fila de la matriz (cada recurso)
+    nombre, horas, clasificacion = procesar_recurso(recurso)      # Llama a la función procesar_recurso (R5) para obtener datos completos
+    informe.append((nombre, horas, clasificacion))                # Agrega una tupla con nombre, horas y clasificación a la lista informe
